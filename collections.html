@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Apothecary Boutique | مقتنيات الدار العطرية — Maison AlUla</title>
+  <meta name="description" content="استكشف مقتنيات دار العُلا من العطور النقية، وبخور اللبان الملكي، وزيوت الجسم النباتية، والمباخر الطينية المنحوتة يدوياً.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%239A5B32'/><text x='50' y='65' font-family='serif' font-size='42' fill='%23FFF' text-anchor='middle'>A</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <span class="badge-live" data-i18n="announcement">طقم استكشاف عطري مجاني وختم شمعي نحاسي مع كل طلب — شحن سريع ومجاني</span>
+      <span class="apothecary-code" style="color: var(--accent-gold); font-size: 0.68rem;">COLLECTION CATALOG // 13 ARTISANAL LOTS</span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-identity">
+        <span class="brand-title">MAISON ALULA</span>
+        <span class="brand-subtitle" data-i18n="brandSubtitle">دار العُلا للعطور النادرة والمقتنيات الحسية</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="navLookbook">الرئيسية</a></li>
+          <li><a href="collections.html" class="active" data-i18n="navBoutique">المقتنيات العطرية</a></li>
+          <li><a href="atelier.html" data-i18n="navAtelier">معمل التركيب الحصري</a></li>
+          <li><a href="journal.html" data-i18n="navJournal">مجلة العُلا</a></li>
+          <li><a href="checkout.html" data-i18n="navCheckout">إتمام الطلب</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-currency-toggle" title="Change Currency">SAR</button>
+        <button type="button" class="btn-lang-toggle" title="Toggle Language">English (EN)</button>
+        <button type="button" class="btn-bag-drawer" title="Open Bag">
+          <span data-i18n="cartCountLabel">المقتنيات</span>
+          <span class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header-editorial">
+    <div class="container">
+      <div class="eyebrow" style="justify-content: center;" data-en="Apothecary Boutique" data-ar="مقتنيات الصيدلية العطرية">مقتنيات الصيدلية العطرية</div>
+      <h1 class="section-title" data-en="The Rare Fragrance Catalog" data-ar="مقتنيات الدار من العطور والبخور والزيوت">مقتنيات الدار من العطور والبخور والزيوت</h1>
+      <p class="section-subtitle" style="max-width: 680px; margin: 0 auto;" data-en="Each formulation is compounded in unhurried artisanal batches, hand-numbered and sealed in UV-filtering apothecary vessels." data-ar="تراكيب عطرية نادرة معتّقة في أقبية الطين، مرقمة ومختومة يدوياً في قوارير صيدلانية تحمي السوائل من الضوء.">
+        تراكيب عطرية نادرة معتّقة في أقبية الطين، مرقمة ومختومة يدوياً في قوارير صيدلانية تحمي السوائل من الضوء.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter & Search Toolbar -->
+  <section class="filter-toolbar">
+    <div class="container filter-toolbar-inner">
+      <!-- Category Pills -->
+      <div class="filter-pills-group" id="categoryFilterPills">
+        <button type="button" class="btn-filter-pill active" data-cat="all">
+          <span data-en="All Lots (13)" data-ar="كافة المقتنيات (13)">كافة المقتنيات (13)</span>
+        </button>
+        <button type="button" class="btn-filter-pill" data-cat="parfum">
+          <span data-en="Extrait de Parfum (4)" data-ar="عطور نقية مركزة (4)">عطور نقية مركزة (4)</span>
+        </button>
+        <button type="button" class="btn-filter-pill" data-cat="incense">
+          <span data-en="Incense & Bakhoor (3)" data-ar="بخور وأصماغ ملكية (3)">بخور وأصماغ ملكية (3)</span>
+        </button>
+        <button type="button" class="btn-filter-pill" data-cat="oils">
+          <span data-en="Botanical Oils (3)" data-ar="زيوت وإكسيرات الجسم (3)">زيوت وإكسيرات الجسم (3)</span>
+        </button>
+        <button type="button" class="btn-filter-pill" data-cat="ceramics">
+          <span data-en="Ceramic Vessels (3)" data-ar="مباخر وأوانٍ فخارية (3)">مباخر وأوانٍ فخارية (3)</span>
+        </button>
+      </div>
+
+      <!-- Search & Sort Controls -->
+      <div class="filter-search-sort">
+        <div class="search-input-wrap">
+          <input type="text" id="catalogSearchInput" class="search-input" placeholder="بحث بالمكونات أو الاسم..." aria-label="Search catalog">
+        </div>
+
+        <select id="catalogSortSelect" class="sort-select" aria-label="Sort products">
+          <option value="featured">الموصى به // Featured</option>
+          <option value="price-asc">السعر: من الأقل للأعلى</option>
+          <option value="price-desc">السعر: من الأعلى للأقل</option>
+          <option value="name">الاسم أبجدياً // Alphabetical</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Secondary Olfactory Family Bar -->
+    <div class="container" style="padding-top: 14px; display: flex; align-items: center; gap: 12px; font-size: 0.8rem;">
+      <span class="apothecary-code" style="font-size: 0.7rem; color: var(--ink-muted);" data-en="Olfactory Accord:" data-ar="العائلة العطرية:">العائلة العطرية:</span>
+      <div class="filter-pills-group" id="familyFilterPills">
+        <button type="button" class="btn-filter-pill active" data-family="all" style="padding: 4px 12px; font-size: 0.74rem;">الكل</button>
+        <button type="button" class="btn-filter-pill" data-family="woody" style="padding: 4px 12px; font-size: 0.74rem;">خشبية / Woody</button>
+        <button type="button" class="btn-filter-pill" data-family="floral" style="padding: 4px 12px; font-size: 0.74rem;">زهورية / Floral</button>
+        <button type="button" class="btn-filter-pill" data-family="resinous" style="padding: 4px 12px; font-size: 0.74rem;">صمغية لبانية / Resinous</button>
+        <button type="button" class="btn-filter-pill" data-family="spiced" style="padding: 4px 12px; font-size: 0.74rem;">توابل شرقية / Spiced</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Catalog Grid Section -->
+  <section class="catalog-section">
+    <div class="container">
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Rendered dynamically -->
+      </div>
+      <div id="catalogEmptyMsg" style="display: none; text-align: center; padding: 60px 0;">
+        <p class="editorial-italic" style="font-size: 1.3rem; color: var(--ink-muted);" data-en="No lots found matching your olfactory filters." data-ar="لم يُعثر على مقتنيات تطابق معايير البحث المحددة.">
+          لم يُعثر على مقتنيات تطابق معايير البحث المحددة.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick-View Apothecary Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-body-grid" id="modalContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Persistent Shopping Bag Drawer -->
+  <div class="bag-drawer-overlay" id="bagOverlay"></div>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Shopping Bag">
+    <div class="bag-drawer-header">
+      <h3 class="bag-drawer-title" data-i18n="bagTitle">سلة المقتنيات</h3>
+      <button type="button" class="bag-drawer-close" id="bagCloseBtn" aria-label="Close Bag">✕</button>
+    </div>
+    <div class="bag-drawer-body" id="bagDrawerBody">
+      <!-- Items dynamically populated by assets/app.js -->
+    </div>
+    <div class="bag-drawer-footer">
+      <div class="bag-subtotal-row">
+        <span class="bag-subtotal-label" data-i18n="subtotal">المجموع الفرعي</span>
+        <span class="bag-subtotal-amount" id="bagSubtotal">0 ر.س</span>
+      </div>
+      <div class="bag-perk-note">
+        <span>✧</span>
+        <span data-i18n="vatIncluded">شامل ضريبة القيمة المضافة والشحن الملكي السريع</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout-drawer" data-i18n="btnCheckout">متابعة الدفع وحجز الطرد</a>
+    </div>
+  </aside>
+
+  <!-- Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand-title">MAISON ALULA</div>
+        <p class="footer-brand-desc" data-en="Haute Parfumerie, Bespoke Scent Atelier & Cultural Editorial Magazine dedicated to the timeless botanicals of the ancient Incense Road." data-ar="دار العطور النادرة، ومعمل التركيب الحصري، والمجلة الثقافية الحسية المكرسة لروائع النباتات العطرية على طريق البخور القديم.">
+          دار العطور النادرة، ومعمل التركيب الحصري، والمجلة الثقافية الحسية المكرسة لروائع النباتات العطرية على طريق البخور القديم.
+        </p>
+        <div class="apothecary-code" style="color: var(--accent-gold);">OLD TOWN ATELIER // ALULA, KSA</div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading" data-en="Navigation" data-ar="الملاحة">الملاحة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="navLookbook">الرئيسية</a></li>
+          <li><a href="collections.html" data-i18n="navBoutique">المقتنيات العطرية</a></li>
+          <li><a href="atelier.html" data-i18n="navAtelier">معمل التركيب الحصري</a></li>
+          <li><a href="journal.html" data-i18n="navJournal">مجلة العُلا</a></li>
+          <li><a href="checkout.html" data-i18n="navCheckout">إتمام الطلب</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading" data-en="Apothecary Hours" data-ar="ساعات المشغل">ساعات المشغل</h4>
+        <ul class="footer-links" style="font-size: 0.82rem; color: var(--ink-faint);">
+          <li>Saturday – Thursday: 10:00 – 21:00</li>
+          <li>Friday: 16:00 – 22:00</li>
+          <li>Private Scent Consultation by Appointment</li>
+          <li>Al-Dira Quarter, AlUla Old Town</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading" data-en="Sensory Dispatch" data-ar="النشرة الحسية">النشرة الحسية</h4>
+        <p style="font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 14px;" data-en="Receive quarterly essays on desert chemistry and invitations to private batch releases." data-ar="انضم لمراسلات الدار الفصلية لتصلك مقالات كيمياء الصحراء ودعوات اقتناء الدفعات المحدودة.">
+          انضم لمراسلات الدار الفصلية لتصلك مقالات كيمياء الصحراء ودعوات اقتناء الدفعات المحدودة.
+        </p>
+        <div style="display: flex; gap: 8px;">
+          <input type="email" placeholder="votre.email@domaine.com" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); padding: 8px 12px; font-size: 0.8rem; color: #FFF; border-radius: 2px; flex: 1;">
+          <button type="button" class="btn-ghost-terracotta" style="padding: 8px 14px; font-size: 0.75rem;" onclick="MaisonApp.showToast('Bienvenue à Maison AlUla')">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom-bar">
+      <div>© 2026 Maison AlUla Haute Parfumerie. All rights reserved. Founded & Formulated by Tariq Abuashi.</div>
+      <div class="apothecary-code" style="color: var(--ink-faint);">FORMULA CODE: AL-2026-HQ // NATURAL EXTRAIT ONLY</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/catalog.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    let activeCategory = 'all';
+    let activeFamily = 'all';
+    let searchQuery = '';
+    let sortOrder = 'featured';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initFilterListeners();
+      renderCatalog();
+
+      // Modal close handlers
+      const modalClose = document.getElementById('modalCloseBtn');
+      const modalOverlay = document.getElementById('quickViewModal');
+      if (modalClose) modalClose.addEventListener('click', closeModal);
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          if (e.target === modalOverlay) closeModal();
+        });
+      }
+    });
+
+    function initFilterListeners() {
+      // Category Buttons
+      document.querySelectorAll('#categoryFilterPills button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#categoryFilterPills button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeCategory = btn.getAttribute('data-cat');
+          renderCatalog();
+        });
+      });
+
+      // Olfactory Family Buttons
+      document.querySelectorAll('#familyFilterPills button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('#familyFilterPills button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFamily = btn.getAttribute('data-family');
+          renderCatalog();
+        });
+      });
+
+      // Search input
+      const searchInput = document.getElementById('catalogSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.toLowerCase().trim();
+          renderCatalog();
+        });
+      }
+
+      // Sort Select
+      const sortSelect = document.getElementById('catalogSortSelect');
+      if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+          sortOrder = e.target.value;
+          renderCatalog();
+        });
+      }
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById('catalogGrid');
+      const emptyMsg = document.getElementById('catalogEmptyMsg');
+      if (!grid) return;
+
+      const lang = MaisonApp.getLang();
+
+      let filtered = MAISON_CATALOG.filter(item => {
+        const matchesCat = activeCategory === 'all' || item.category === activeCategory;
+        const matchesFamily = activeFamily === 'all' || item.family === activeFamily;
+        const matchesSearch = !searchQuery || 
+          item.name_en.toLowerCase().includes(searchQuery) ||
+          item.name_ar.toLowerCase().includes(searchQuery) ||
+          item.notes.top_en.toLowerCase().includes(searchQuery) ||
+          item.notes.heart_en.toLowerCase().includes(searchQuery) ||
+          item.notes.base_en.toLowerCase().includes(searchQuery) ||
+          item.notes.top_ar.includes(searchQuery) ||
+          item.notes.heart_ar.includes(searchQuery) ||
+          item.notes.base_ar.includes(searchQuery);
+
+        return matchesCat && matchesFamily && matchesSearch;
+      });
+
+      // Sorting
+      if (sortOrder === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortOrder === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortOrder === 'name') {
+        filtered.sort((a, b) => lang === 'ar' ? a.name_ar.localeCompare(b.name_ar) : a.name_en.localeCompare(b.name_en));
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyMsg.style.display = 'block';
+        return;
+      }
+
+      emptyMsg.style.display = 'none';
+      let html = '';
+
+      filtered.forEach(item => {
+        const name = lang === 'ar' ? item.name_ar : item.name_en;
+        const sub = lang === 'ar' ? item.subtitle_ar : item.subtitle_en;
+        const cat = lang === 'ar' ? item.category_ar : item.category_en;
+        const family = lang === 'ar' ? item.family_ar : item.family_en;
+
+        html += `
+          <div class="product-card">
+            <div class="product-card-image">
+              <span class="product-card-badge">${item.longevity}</span>
+              <span class="product-card-badge family">${family}</span>
+              <div style="width: 140px; height: 190px;">
+                ${generateBottleSvg(item.svgColor, item.svgCap, item.name_en, 'LOT 26')}
+              </div>
+            </div>
+            <div class="product-card-content">
+              <div>
+                <div class="product-category-tag">${cat}</div>
+                <h3 class="product-title">${item.name_en}</h3>
+                <div class="product-title-ar">${item.name_ar}</div>
+                <p class="product-notes-summary">${sub}</p>
+              </div>
+              <div class="product-footer-bar">
+                <div class="product-price">${MaisonApp.formatPrice(item.price)}</div>
+                <div class="product-actions">
+                  <button type="button" class="btn-ghost-terracotta" onclick="openQuickView('${item.id}')">
+                    ${lang === 'ar' ? 'نظرة سريعة' : 'Quick View'}
+                  </button>
+                  <button type="button" class="btn-primary" style="padding: 9px 14px; font-size: 0.75rem;" onclick="addCatalogItemToBag('${item.id}')">
+                    ${lang === 'ar' ? 'إضافة' : 'Add'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      grid.innerHTML = html;
+    }
+
+    function addCatalogItemToBag(id) {
+      const product = MAISON_CATALOG.find(p => p.id === id);
+      if (product) {
+        MaisonApp.addToBag({
+          id: product.id,
+          name_en: product.name_en,
+          name_ar: product.name_ar,
+          subtitle_en: product.subtitle_en,
+          subtitle_ar: product.subtitle_ar,
+          price: product.price,
+          size: '50ml Flacon',
+          svgColor: product.svgColor,
+          svgCap: product.svgCap,
+          qty: 1
+        });
+      }
+    }
+
+    // Quick View Modal
+    let selectedModalSize = '50ml';
+
+    function openQuickView(id) {
+      const product = MAISON_CATALOG.find(p => p.id === id);
+      if (!product) return;
+
+      selectedModalSize = '50ml';
+      const lang = MaisonApp.getLang();
+      const modal = document.getElementById('quickViewModal');
+      const content = document.getElementById('modalContent');
+      if (!modal || !content) return;
+
+      const name = lang === 'ar' ? product.name_ar : product.name_en;
+      const sub = lang === 'ar' ? product.subtitle_ar : product.subtitle_en;
+      const terroir = lang === 'ar' ? product.terroir_ar : product.terroir_en;
+
+      content.innerHTML = `
+        <div class="modal-image-col">
+          <div style="width: 200px; height: 280px;">
+            ${generateBottleSvg(product.svgColor, product.svgCap, product.name_en, 'EXTRAIT')}
+          </div>
+        </div>
+        <div class="modal-info-col">
+          <div class="eyebrow">${product.category_en}</div>
+          <h2 class="serif" style="font-size: 1.8rem; margin-bottom: 4px; color: var(--ink-espresso);">${name}</h2>
+          <div class="editorial-italic" style="color: var(--accent-terracotta); margin-bottom: 16px;">${product.name_en} // ${product.longevity}</div>
+          <p style="font-size: 0.9rem; color: var(--ink-muted); margin-bottom: 20px;">${sub}</p>
+
+          <table class="pyramid-table">
+            <tr>
+              <td class="tier-label">${lang === 'ar' ? 'النفحات العليا' : 'Top Notes'}</td>
+              <td>${lang === 'ar' ? product.notes.top_ar : product.notes.top_en}</td>
+            </tr>
+            <tr>
+              <td class="tier-label">${lang === 'ar' ? 'قلب العطر' : 'Heart Notes'}</td>
+              <td>${lang === 'ar' ? product.notes.heart_ar : product.notes.heart_en}</td>
+            </tr>
+            <tr>
+              <td class="tier-label">${lang === 'ar' ? 'قاعدة العطر' : 'Base Notes'}</td>
+              <td>${lang === 'ar' ? product.notes.base_ar : product.notes.base_en}</td>
+            </tr>
+          </table>
+
+          <div style="margin-bottom: 20px; font-size: 0.82rem; background: var(--bg-sand); padding: 10px 14px; border-radius: 2px;">
+            <strong style="color: var(--accent-terracotta);">${lang === 'ar' ? 'الموطن والاستخلاص:' : 'Botanical Terroir:'}</strong>
+            <span>${terroir}</span>
+          </div>
+
+          <!-- Bottle Size Selector -->
+          <div style="margin-bottom: 24px;">
+            <label style="font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; display: block; margin-bottom: 8px;">
+              ${lang === 'ar' ? 'اختر الحجم:' : 'Select Flacon Volume:'}
+            </label>
+            <div style="display: flex; gap: 12px;">
+              <button type="button" class="btn-filter-pill active" id="modalSize50Btn" onclick="updateModalSize('${product.id}', '50ml')">
+                50 ml Flacon — ${MaisonApp.formatPrice(product.price)}
+              </button>
+              <button type="button" class="btn-filter-pill" id="modalSize100Btn" onclick="updateModalSize('${product.id}', '100ml')">
+                100 ml Flacon — ${MaisonApp.formatPrice(product.price_100ml)}
+              </button>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 14px; align-items: center;">
+            <div id="modalPriceDisplay" style="font-family: var(--font-mono); font-size: 1.5rem; font-weight: 600; color: var(--ink-espresso);">
+              ${MaisonApp.formatPrice(product.price)}
+            </div>
+            <button type="button" class="btn-primary" style="flex: 1;" onclick="addModalItemToBag('${product.id}')">
+              ${lang === 'ar' ? 'إضافة إلى سلة المقتنيات' : 'Add to Shopping Bag'}
+            </button>
+          </div>
+        </div>
+      `;
+
+      modal.classList.add('active');
+    }
+
+    function updateModalSize(productId, size) {
+      selectedModalSize = size;
+      const product = MAISON_CATALOG.find(p => p.id === productId);
+      if (!product) return;
+
+      const price = size === '100ml' ? product.price_100ml : product.price;
+      const display = document.getElementById('modalPriceDisplay');
+      if (display) display.textContent = MaisonApp.formatPrice(price);
+
+      const btn50 = document.getElementById('modalSize50Btn');
+      const btn100 = document.getElementById('modalSize100Btn');
+      if (size === '50ml') {
+        if (btn50) btn50.classList.add('active');
+        if (btn100) btn100.classList.remove('active');
+      } else {
+        if (btn50) btn50.classList.remove('active');
+        if (btn100) btn100.classList.add('active');
+      }
+    }
+
+    function addModalItemToBag(productId) {
+      const product = MAISON_CATALOG.find(p => p.id === productId);
+      if (!product) return;
+
+      const price = selectedModalSize === '100ml' ? product.price_100ml : product.price;
+      MaisonApp.addToBag({
+        id: product.id,
+        name_en: product.name_en,
+        name_ar: product.name_ar,
+        subtitle_en: product.subtitle_en,
+        subtitle_ar: product.subtitle_ar,
+        price: price,
+        size: `${selectedModalSize} Flacon`,
+        svgColor: product.svgColor,
+        svgCap: product.svgCap,
+        qty: 1
+      });
+      closeModal();
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('quickViewModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    window.onMaisonLanguageChanged = () => {
+      renderCatalog();
+    };
+
+    window.onMaisonCurrencyChanged = () => {
+      renderCatalog();
+    };
+  </script>
+</body>
+</html>

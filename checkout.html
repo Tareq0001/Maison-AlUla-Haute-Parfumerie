@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Boutique Checkout & Wax-Seal Gift Atelier | إتمام الطلب — Maison AlUla</title>
+  <meta name="description" content="إتمام الطلب وتغليف الهدايا بالشمع النحاسي — اختر باقة التغليف الفاخرة، واكتب بطاقة الإهداء بالخط اليدوي، واحصل على شهادة الأصالة الصيدلانية.">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%239A5B32'/><text x='50' y='65' font-family='serif' font-size='42' fill='%23FFF' text-anchor='middle'>A</text></svg>">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <span class="badge-live" data-i18n="announcement">طقم استكشاف عطري مجاني وختم شمعي نحاسي مع كل طلب — شحن سريع ومجاني</span>
+      <span class="apothecary-code" style="color: var(--accent-gold); font-size: 0.68rem;">SECURE BOUTIQUE CHECKOUT // CERTIFICATE ISSUANCE</span>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-identity">
+        <span class="brand-title">MAISON ALULA</span>
+        <span class="brand-subtitle" data-i18n="brandSubtitle">دار العُلا للعطور النادرة والمقتنيات الحسية</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" data-i18n="navLookbook">الرئيسية</a></li>
+          <li><a href="collections.html" data-i18n="navBoutique">المقتنيات العطرية</a></li>
+          <li><a href="atelier.html" data-i18n="navAtelier">معمل التركيب الحصري</a></li>
+          <li><a href="journal.html" data-i18n="navJournal">مجلة العُلا</a></li>
+          <li><a href="checkout.html" class="active" data-i18n="navCheckout">إتمام الطلب</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="btn-currency-toggle" title="Change Currency">SAR</button>
+        <button type="button" class="btn-lang-toggle" title="Toggle Language">English (EN)</button>
+        <button type="button" class="btn-bag-drawer" title="Open Bag">
+          <span data-i18n="cartCountLabel">المقتنيات</span>
+          <span class="bag-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header-editorial">
+    <div class="container">
+      <div class="eyebrow" style="justify-content: center;" data-en="Apothecary Dispatch" data-ar="حجز الطرد والتغليف الإهدائي">حجز الطرد والتغليف الإهدائي</div>
+      <h1 class="section-title" data-en="Boutique Checkout & Wax-Seal Packaging" data-ar="مراجعة المقتنيات والتغليف بالختم الشمعي">مراجعة المقتنيات والتغليف بالختم الشمعي</h1>
+      <p class="section-subtitle" style="max-width: 680px; margin: 0 auto;" data-en="Review your curated lots, compose a handwritten calligraphy card, and seal your order with an authentic numbered certificate of origin." data-ar="راجع مقتنياتك العطرية وتراكيب المعمل، ودون رسالة الإهداء بخط يدوي، وأتمم حجز طردك المختوم بشهادة صيدلانية رسمية.">
+        راجع مقتنياتك العطرية وتراكيب المعمل، ودون رسالة الإهداء بخط يدوي، وأتمم حجز طردك المختوم بشهادة صيدلانية رسمية.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Checkout Section -->
+  <section class="checkout-section">
+    <div class="container checkout-grid">
+      <!-- Left Column: Cart Items Review & Delivery Info -->
+      <div>
+        <!-- Bag Items Box -->
+        <div class="checkout-box">
+          <h2 class="checkout-box-title">
+            <span>✧</span>
+            <span data-en="1. Curated Lots in Your Collection" data-ar="1. المقتنيات المحددة في طلبك">1. المقتنيات المحددة في طلبك</span>
+          </h2>
+          <div id="checkoutItemsList">
+            <!-- Dynamic Cart Items Rendered Here -->
+          </div>
+        </div>
+
+        <!-- Client & Shipping Details -->
+        <div class="checkout-box">
+          <h2 class="checkout-box-title">
+            <span>✧</span>
+            <span data-en="2. Client & Delivery Destination" data-ar="2. بيانات المقتني وعنوان الشحن">2. بيانات المقتني وعنوان الشحن</span>
+          </h2>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <div>
+              <label style="font-family: var(--font-mono); font-size: 0.72rem; display: block; margin-bottom: 6px;">
+                <span data-en="Full Client Name *" data-ar="اسم المقتني بالكامل *">اسم المقتني بالكامل *</span>
+              </label>
+              <input type="text" id="orderClientName" value="أ. طارق ابوعشي" style="width: 100%; padding: 10px 14px; border: 1px solid var(--ink-border); font-size: 0.9rem; border-radius: 2px;">
+            </div>
+
+            <div>
+              <label style="font-family: var(--font-mono); font-size: 0.72rem; display: block; margin-bottom: 6px;">
+                <span data-en="Contact Phone / WhatsApp *" data-ar="رقم الجوال / الواتساب *">رقم الجوال / الواتساب *</span>
+              </label>
+              <input type="text" id="orderClientPhone" value="+966 50 123 4567" style="width: 100%; padding: 10px 14px; border: 1px solid var(--ink-border); font-size: 0.9rem; border-radius: 2px; direction: ltr; text-align: left;">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <div>
+              <label style="font-family: var(--font-mono); font-size: 0.72rem; display: block; margin-bottom: 6px;">
+                <span data-en="City / Region *" data-ar="المدينة / المنطقة *">المدينة / المنطقة *</span>
+              </label>
+              <input type="text" id="orderClientCity" value="أبها // منطقة عسير" style="width: 100%; padding: 10px 14px; border: 1px solid var(--ink-border); font-size: 0.9rem; border-radius: 2px;">
+            </div>
+
+            <div>
+              <label style="font-family: var(--font-mono); font-size: 0.72rem; display: block; margin-bottom: 6px;">
+                <span data-en="Postal / Street Address" data-ar="الحي / العنوان بالتفصيل">الحي / العنوان بالتفصيل</span>
+              </label>
+              <input type="text" id="orderClientAddress" value="طريق الملك فيصل، حي السد" style="width: 100%; padding: 10px 14px; border: 1px solid var(--ink-border); font-size: 0.9rem; border-radius: 2px;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Complimentary Luxury Packaging Selector -->
+        <div class="checkout-box">
+          <h2 class="checkout-box-title">
+            <span>✧</span>
+            <span data-en="3. Complimentary Archival Gift Presentation" data-ar="3. التغليف الإهدائي والختم الملكي المجاني">3. التغليف الإهدائي والختم الملكي المجاني</span>
+          </h2>
+          <p style="font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 18px;" data-en="Every order from Maison AlUla arrives in museum-grade gift presentation at no additional charge." data-ar="يصل كل طلب من دار العُلا بتغليف إهدائي متحفي فاخر دون أي تكلفة إضافية.">
+            يصل كل طلب من دار العُلا بتغليف إهدائي متحفي فاخر دون أي تكلفة إضافية.
+          </p>
+
+          <div class="packaging-options-grid">
+            <label class="packaging-option-card selected" id="packPouchCard">
+              <input type="checkbox" id="checkPouch" checked style="accent-color: var(--accent-terracotta); transform: scale(1.2); margin-top: 3px;">
+              <div>
+                <strong style="font-size: 0.92rem; display: block;" data-en="Unbleached Egyptian Cotton Apothecary Pouch" data-ar="كيس صيدلاني خام من القطن المصري غير المعالج">كيس صيدلاني خام من القطن المصري غير المعالج</strong>
+                <span style="font-size: 0.78rem; color: var(--ink-muted);" data-en="Drawstring cotton pouch hand-printed with archival botanical diagrams." data-ar="كيس قطني حافظ برباط، مطبوع برسومات أركيولوجية لنباتات وادي دوكة.">كيس قطني حافظ برباط، مطبوع برسومات أركيولوجية لنباتات وادي دوكة.</span>
+              </div>
+            </label>
+
+            <label class="packaging-option-card selected" id="packSealCard">
+              <input type="checkbox" id="checkSeal" checked style="accent-color: var(--accent-terracotta); transform: scale(1.2); margin-top: 3px;">
+              <div>
+                <strong style="font-size: 0.92rem; display: block;" data-en="Hand-Stamped Crimson & Brass Wax Seal" data-ar="ختم شمعي قرمزي ونحاسي مطروق يدوياً">ختم شمعي قرمزي ونحاسي مطروق يدوياً</strong>
+                <span style="font-size: 0.78rem; color: var(--ink-muted);" data-en="Pure bees-wax seal pressed with the Maison AlUla monograph emblem." data-ar="ختم شمعي طبيعي مصهور يُطبع بشعار دار العُلا الملكي لحفظ سرية العبوة.">ختم شمعي طبيعي مصهور يُطبع بشعار دار العُلا الملكي لحفظ سرية العبوة.</span>
+              </div>
+            </label>
+
+            <label class="packaging-option-card selected" id="packCardCard">
+              <input type="checkbox" id="checkCard" checked style="accent-color: var(--accent-terracotta); transform: scale(1.2); margin-top: 3px;" onchange="toggleGiftCardComposer()">
+              <div>
+                <strong style="font-size: 0.92rem; display: block;" data-en="Personalized Calligraphy Gift Card" data-ar="بطاقة إهداء مخصصة بخط يدوي فاخر">بطاقة إهداء مخصصة بخط يدوي فاخر</strong>
+                <span style="font-size: 0.78rem; color: var(--ink-muted);" data-en="Heavy deckle-edge parchment card inscribed with your custom note." data-ar="بطاقة من ورق البردي المحبب بأطراف قطنية غير مقصوصة تُخط برسالتك.">بطاقة من ورق البردي المحبب بأطراف قطنية غير مقصوصة تُخط برسالتك.</span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Live Gift Card Composer -->
+          <div id="giftCardComposerWrap" style="margin-top: 24px;">
+            <label style="font-family: var(--font-mono); font-size: 0.72rem; display: block; margin-bottom: 6px;">
+              <span data-en="Compose Your Personal Inscription:" data-ar="اكتب نص رسالة الإهداء:">اكتب نص رسالة الإهداء:</span>
+            </label>
+            <textarea id="giftMessageInput" rows="3" style="width: 100%; padding: 12px 14px; border: 1px solid var(--ink-border); font-size: 0.95rem; border-radius: 2px;" oninput="updateCalligraphyPreview()">إلى صاحب الذوق الرفيع، تحية معطرة بأنقى نفحات لبان الحوجري وورد الطائف الملكي من دار العُلا.</textarea>
+
+            <!-- Live Calligraphy Preview Parchment -->
+            <div class="calligraphy-preview-box">
+              <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--accent-terracotta); margin-bottom: 8px;">
+                CALLIGRAPHY PREVIEW // بطاقة الإهداء الحية
+              </div>
+              <div class="calligraphy-preview-text" id="calligraphyPreviewText">
+                إلى صاحب الذوق الرفيع، تحية معطرة بأنقى نفحات لبان الحوجري وورد الطائف الملكي من دار العُلا.
+              </div>
+              <div style="text-align: right; margin-top: 10px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-faint);">
+                — MAISON ALULA ATELIER DE CALLIGRAPHIE
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Order Summary, VIP Promo Code & Complete Action -->
+      <div style="position: sticky; top: 110px;">
+        <div class="checkout-box" style="box-shadow: var(--shadow-warm);">
+          <h2 class="checkout-box-title">
+            <span>✧</span>
+            <span data-en="Summary of Order" data-ar="ملخص الحساب والرسوم">ملخص الحساب والرسوم</span>
+          </h2>
+
+          <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+              <span style="color: var(--ink-muted);" data-en="Subtotal" data-ar="مجموع المقتنيات">مجموع المقتنيات</span>
+              <span style="font-family: var(--font-mono); font-weight: 600;" id="orderSubtotal">0 ر.س</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--accent-olive);">
+              <span data-en="Worldwide Express Courier" data-ar="الشحن السريع الملكي">الشحن السريع الملكي</span>
+              <span style="font-family: var(--font-mono); font-weight: 600;" data-en="FREE (0 SAR)" data-ar="مجاني (0 ر.س)">مجاني (0 ر.س)</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--accent-terracotta);" id="discountRow" style="display: none;">
+              <span data-en="VIP Privilege Discount (15%)" data-ar="خصم عضوية الدار (15%)">خصم عضوية الدار (15%)</span>
+              <span style="font-family: var(--font-mono); font-weight: 600;" id="orderDiscount">-0 ر.س</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--ink-muted);">
+              <span data-en="KSA VAT Included (15%)" data-ar="ضريبة القيمة المضافة المشمولة (15%)">ضريبة القيمة المضافة المشمولة (15%)</span>
+              <span style="font-family: var(--font-mono);" id="orderVat">0 ر.س</span>
+            </div>
+
+            <div style="border-top: 1px solid var(--ink-border); padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600;" data-en="Grand Total" data-ar="الإجمالي النهائي">الإجمالي النهائي</span>
+              <span style="font-family: var(--font-mono); font-size: 1.6rem; font-weight: 700; color: var(--accent-terracotta);" id="orderGrandTotal">0 ر.س</span>
+            </div>
+          </div>
+
+          <!-- Promo Code Box -->
+          <div style="margin-bottom: 24px; background: var(--bg-sand); padding: 14px; border-radius: 2px;">
+            <label style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--ink-muted); display: block; margin-bottom: 6px;">
+              <span data-en="Enter VIP Privilège Code (e.g. ALULA15):" data-ar="كود الخصم الحصري (مثال: ALULA15):">كود الخصم الحصري (مثال: ALULA15):</span>
+            </label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="promoCodeInput" placeholder="ALULA15" style="background: #FFF; border: 1px solid var(--ink-border); padding: 8px 12px; font-family: var(--font-mono); font-size: 0.85rem; flex: 1; text-transform: uppercase;">
+              <button type="button" class="btn-ghost-terracotta" style="padding: 8px 16px;" onclick="applyPromoCode()">
+                <span data-en="Apply" data-ar="تطبيق">تطبيق</span>
+              </button>
+            </div>
+            <div id="promoMsg" style="font-size: 0.75rem; margin-top: 6px; display: none;"></div>
+          </div>
+
+          <!-- Complete Order CTA -->
+          <button type="button" class="btn-primary" style="width: 100%; padding: 16px; font-size: 0.92rem;" onclick="generateOrderCertificate()">
+            <span data-en="Complete Order & Generate Certificate" data-ar="إتمام الطلب وإصدار شهادة الأصالة">إتمام الطلب وإصدار شهادة الأصالة</span>
+          </button>
+
+          <div style="margin-top: 14px; text-align: center; font-size: 0.72rem; color: var(--ink-faint); display: flex; align-items: center; justify-content: center; gap: 6px;">
+            <span>🔒</span>
+            <span data-en="256-Bit Encrypted Archival Order Guarantee" data-ar="طلب مشفر ومضمون بشهادة أصلية من مشغل العُلا">طلب مشفر ومضمون بشهادة أصلية من مشغل العُلا</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Printable Certificate & Invoice Modal -->
+  <div class="modal-overlay" id="certModal">
+    <div class="modal-dialog" style="max-width: 720px; padding: 24px;">
+      <button type="button" class="modal-close-btn" onclick="closeCertModal()" aria-label="Close certificate">✕</button>
+      
+      <div class="certificate-frame" id="printableCert">
+        <div class="certificate-wax-seal">A</div>
+        <div class="apothecary-code" style="color: var(--accent-terracotta); margin-bottom: 6px;">
+          ROYAUME D'ARABIE SAOUDITE // MAISON ALULA HAUTE PARFUMERIE
+        </div>
+        <h2 class="serif" style="font-size: 2rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; color: var(--ink-espresso);">
+          CERTIFICAT D'AUTHENTICITÉ
+        </h2>
+        <div class="editorial-italic" style="font-size: 1.1rem; color: var(--accent-bronze); margin-bottom: 24px;">
+          وثيقة الأصالة والملكية الصيدلانية لمقتنيات العُلا النادرة
+        </div>
+
+        <div style="display: flex; justify-content: space-around; border-top: 1px solid var(--ink-border-dark); border-bottom: 1px solid var(--ink-border-dark); padding: 14px 0; margin-bottom: 24px; font-family: var(--font-mono); font-size: 0.75rem;">
+          <div>
+            <div style="color: var(--ink-faint);">CERTIFICATE №</div>
+            <strong id="certNumber" style="color: var(--ink-espresso);">AL-2026-8849</strong>
+          </div>
+          <div>
+            <div style="color: var(--ink-faint);">COMPOUNDED FOR</div>
+            <strong id="certClientName" style="color: var(--accent-terracotta);">أ. طارق ابوعشي</strong>
+          </div>
+          <div>
+            <div style="color: var(--ink-faint);">DISPATCH DATE</div>
+            <strong id="certDate">21 OCT 2026</strong>
+          </div>
+        </div>
+
+        <div style="text-align: right; margin-bottom: 24px;">
+          <h4 style="font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 10px; border-bottom: 1px solid var(--ink-border); padding-bottom: 6px;">
+            قائمة المقتنيات المسجلة / Registered Lots:
+          </h4>
+          <div id="certItemsBreakdown" style="font-size: 0.88rem; line-height: 1.8;">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div style="background: rgba(154, 91, 50, 0.06); border: 1px dashed var(--accent-bronze); padding: 16px; margin-bottom: 24px; font-size: 0.8rem; color: var(--ink-muted); text-align: justify; line-height: 1.6;">
+          تشهد دار العُلا للعطور النادرة أن كافة الخلاصات المرفقة في هذا الطرد قد تم استخلاصها من نباتات طبيعية نادرة عبر تقنيات التقطير البطيء، وتعتيقها لمدة لا تقل عن 18 شهراً داخل أقبية الطين في البلدة القديمة بالعُلا.
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; padding-top: 16px; border-top: 1px solid var(--ink-border);">
+          <div style="text-align: left;">
+            <div class="apothecary-code" style="font-size: 0.65rem;">MASTER PERFUMER SIGNATURE</div>
+            <div style="font-family: var(--font-script); font-size: 1.8rem; color: var(--ink-espresso); margin-top: 4px;">Tariq Abuashi</div>
+          </div>
+          <div style="text-align: right;">
+            <div class="apothecary-code" style="font-size: 0.65rem;">TOTAL SETTLED AMOUNT</div>
+            <div style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; color: var(--accent-terracotta);" id="certTotalAmount">0 SAR</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px;">
+        <button type="button" class="btn-secondary" onclick="window.print()">
+          <span>🖨️</span> <span data-en="Print Certificate" data-ar="طباعة الشهادة">طباعة الشهادة</span>
+        </button>
+        <button type="button" class="btn-primary" onclick="confirmOrderCompletion()">
+          <span data-en="Confirm & Save" data-ar="تأكيد وحفظ الطلب">تأكيد وحفظ الطلب</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Persistent Shopping Bag Drawer -->
+  <div class="bag-drawer-overlay" id="bagOverlay"></div>
+  <aside class="bag-drawer" id="bagDrawer" aria-label="Shopping Bag">
+    <div class="bag-drawer-header">
+      <h3 class="bag-drawer-title" data-i18n="bagTitle">سلة المقتنيات</h3>
+      <button type="button" class="bag-drawer-close" id="bagCloseBtn" aria-label="Close Bag">✕</button>
+    </div>
+    <div class="bag-drawer-body" id="bagDrawerBody">
+      <!-- Items dynamically populated by assets/app.js -->
+    </div>
+    <div class="bag-drawer-footer">
+      <div class="bag-subtotal-row">
+        <span class="bag-subtotal-label" data-i18n="subtotal">المجموع الفرعي</span>
+        <span class="bag-subtotal-amount" id="bagSubtotal">0 ر.س</span>
+      </div>
+      <div class="bag-perk-note">
+        <span>✧</span>
+        <span data-i18n="vatIncluded">شامل ضريبة القيمة المضافة والشحن الملكي السريع</span>
+      </div>
+      <a href="checkout.html" class="btn-checkout-drawer" data-i18n="btnCheckout">متابعة الدفع وحجز الطرد</a>
+    </div>
+  </aside>
+
+  <!-- Editorial Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand-title">MAISON ALULA</div>
+        <p class="footer-brand-desc" data-en="Haute Parfumerie, Bespoke Scent Atelier & Cultural Editorial Magazine dedicated to the timeless botanicals of the ancient Incense Road." data-ar="دار العطور النادرة، ومعمل التركيب الحصري، والمجلة الثقافية الحسية المكرسة لروائع النباتات العطرية على طريق البخور القديم.">
+          دار العطور النادرة، ومعمل التركيب الحصري، والمجلة الثقافية الحسية المكرسة لروائع النباتات العطرية على طريق البخور القديم.
+        </p>
+        <div class="apothecary-code" style="color: var(--accent-gold);">OLD TOWN ATELIER // ALULA, KSA</div>
+      </div>
+
+      <div>
+        <h4 class="footer-heading" data-en="Navigation" data-ar="الملاحة">الملاحة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="navLookbook">الرئيسية</a></li>
+          <li><a href="collections.html" data-i18n="navBoutique">المقتنيات العطرية</a></li>
+          <li><a href="atelier.html" data-i18n="navAtelier">معمل التركيب الحصري</a></li>
+          <li><a href="journal.html" data-i18n="navJournal">مجلة العُلا</a></li>
+          <li><a href="checkout.html" data-i18n="navCheckout">إتمام الطلب</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading" data-en="Apothecary Hours" data-ar="ساعات المشغل">ساعات المشغل</h4>
+        <ul class="footer-links" style="font-size: 0.82rem; color: var(--ink-faint);">
+          <li>Saturday – Thursday: 10:00 – 21:00</li>
+          <li>Friday: 16:00 – 22:00</li>
+          <li>Private Scent Consultation by Appointment</li>
+          <li>Al-Dira Quarter, AlUla Old Town</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading" data-en="Sensory Dispatch" data-ar="النشرة الحسية">النشرة الحسية</h4>
+        <p style="font-size: 0.82rem; color: var(--ink-faint); margin-bottom: 14px;" data-en="Receive quarterly essays on desert chemistry and invitations to private batch releases." data-ar="انضم لمراسلات الدار الفصلية لتصلك مقالات كيمياء الصحراء ودعوات اقتناء الدفعات المحدودة.">
+          انضم لمراسلات الدار الفصلية لتصلك مقالات كيمياء الصحراء ودعوات اقتناء الدفعات المحدودة.
+        </p>
+        <div style="display: flex; gap: 8px;">
+          <input type="email" placeholder="votre.email@domaine.com" style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); padding: 8px 12px; font-size: 0.8rem; color: #FFF; border-radius: 2px; flex: 1;">
+          <button type="button" class="btn-ghost-terracotta" style="padding: 8px 14px; font-size: 0.75rem;" onclick="MaisonApp.showToast('Bienvenue à Maison AlUla')">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom-bar">
+      <div>© 2026 Maison AlUla Haute Parfumerie. All rights reserved. Founded & Formulated by Tariq Abuashi.</div>
+      <div class="apothecary-code" style="color: var(--ink-faint);">FORMULA CODE: AL-2026-HQ // NATURAL EXTRAIT ONLY</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/catalog.js"></script>
+  <script src="assets/app.js"></script>
+  <script>
+    let discountPercent = 0;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // If cart empty, add a default flagship bottle so checkout isn't blank
+      const cart = MaisonApp.getCart();
+      if (cart.length === 0) {
+        MaisonApp.addToBag({
+          id: 'ombre-elephant',
+          name_en: "L'Ombre d'Éléphant",
+          name_ar: 'ظل صخرة الفيل',
+          subtitle_en: 'A tribute to the iconic geological monument under desert twilight',
+          subtitle_ar: 'تحية عطرية للمَعلَم الجيولوجي الخالد تحت سكون الغسق الصحراوي',
+          price: 920,
+          size: '50ml Flacon',
+          svgColor: '#9A5B32',
+          svgCap: '#C5A059',
+          qty: 1
+        });
+      }
+
+      renderCheckoutItems();
+      updateCalligraphyPreview();
+    });
+
+    function renderCheckoutItems() {
+      const container = document.getElementById('checkoutItemsList');
+      if (!container) return;
+
+      const cart = MaisonApp.getCart();
+      const lang = MaisonApp.getLang();
+
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div style="text-align: center; padding: 40px 0; color: var(--ink-muted);">
+            <p>${lang === 'ar' ? 'سلة المقتنيات فارغة حالياً.' : 'Your shopping bag is empty.'}</p>
+            <a href="collections.html" class="btn-secondary" style="margin-top: 14px;">
+              ${lang === 'ar' ? 'العودة للبوتيك' : 'Return to Boutique'}
+            </a>
+          </div>
+        `;
+        updateCheckoutTotals(0);
+        return;
+      }
+
+      let subtotal = 0;
+      let html = '';
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.qty;
+        subtotal += itemTotal;
+
+        const name = lang === 'ar' ? (item.name_ar || item.name) : (item.name_en || item.name);
+        const sub = lang === 'ar' ? (item.subtitle_ar || '') : (item.subtitle_en || '');
+
+        let thumbSvg = '';
+        if (item.isBespoke) {
+          thumbSvg = generateBottleSvg(item.bottleColor || '#9A5B32', '#C5A059', item.clientName || 'CUSTOM', 'BESPOKE');
+        } else {
+          thumbSvg = generateBottleSvg(item.svgColor || '#9A5B32', item.svgCap || '#C5A059', item.name_en || 'MAISON', 'FLACON');
+        }
+
+        html += `
+          <div style="display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--ink-border); align-items: center;">
+            <div style="width: 60px; height: 75px; background: var(--bg-sand); border: 1px solid var(--ink-border); border-radius: 2px; padding: 4px; display: flex; align-items: center; justify-content: center;">
+              ${thumbSvg}
+            </div>
+            <div style="flex: 1;">
+              <h4 style="font-family: var(--font-serif); font-size: 1.05rem; margin-bottom: 2px; color: var(--ink-espresso);">${name}</h4>
+              ${item.isBespoke ? `<span class="cart-item-badge-bespoke">✧ ${item.concentration || 'Extrait'}</span>` : ''}
+              <div style="font-size: 0.78rem; color: var(--ink-muted);">${item.size || ''} — ${sub}</div>
+              <div style="font-size: 0.75rem; color: var(--ink-faint); margin-top: 4px;">
+                ${lang === 'ar' ? 'الكمية:' : 'Qty:'} ${item.qty} × ${MaisonApp.formatPrice(item.price)}
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <div style="font-family: var(--font-mono); font-size: 1.05rem; font-weight: 600; color: var(--ink-espresso);">${MaisonApp.formatPrice(itemTotal)}</div>
+              <button type="button" class="cart-item-remove" onclick="MaisonApp.removeItem(${index})">
+                ${lang === 'ar' ? 'إزالة' : 'Remove'}
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      updateCheckoutTotals(subtotal);
+    }
+
+    function updateCheckoutTotals(subtotal) {
+      const discount = subtotal * discountPercent;
+      const grandTotal = subtotal - discount;
+      const vat = grandTotal * 0.15; // 15% KSA VAT
+
+      const subEl = document.getElementById('orderSubtotal');
+      const discEl = document.getElementById('orderDiscount');
+      const discRow = document.getElementById('discountRow');
+      const vatEl = document.getElementById('orderVat');
+      const grandEl = document.getElementById('orderGrandTotal');
+
+      if (subEl) subEl.textContent = MaisonApp.formatPrice(subtotal);
+      if (vatEl) vatEl.textContent = MaisonApp.formatPrice(vat);
+      if (grandEl) grandEl.textContent = MaisonApp.formatPrice(grandTotal);
+
+      if (discountPercent > 0) {
+        if (discRow) discRow.style.display = 'flex';
+        if (discEl) discEl.textContent = `-${MaisonApp.formatPrice(discount)}`;
+      } else {
+        if (discRow) discRow.style.display = 'none';
+      }
+    }
+
+    function applyPromoCode() {
+      const input = document.getElementById('promoCodeInput');
+      const msg = document.getElementById('promoMsg');
+      const code = input ? input.value.trim().toUpperCase() : '';
+
+      if (code === 'ALULA15') {
+        discountPercent = 0.15;
+        msg.style.display = 'block';
+        msg.style.color = 'var(--accent-olive)';
+        msg.textContent = '✓ تم تطبيق خصم عضوية الدار (15% VIP Maison Discount)';
+        renderCheckoutItems();
+      } else if (code) {
+        discountPercent = 0;
+        msg.style.display = 'block';
+        msg.style.color = '#B91C1C';
+        msg.textContent = '✕ رمز غير صالح؛ يرجى التأكد من الرمز (جرب: ALULA15)';
+        renderCheckoutItems();
+      }
+    }
+
+    function updateCalligraphyPreview() {
+      const input = document.getElementById('giftMessageInput');
+      const preview = document.getElementById('calligraphyPreviewText');
+      if (input && preview) {
+        preview.textContent = input.value || 'إلى صاحب الذوق الرفيع، تحية معطرة من دار العُلا.';
+      }
+    }
+
+    function toggleGiftCardComposer() {
+      const check = document.getElementById('checkCard');
+      const composer = document.getElementById('giftCardComposerWrap');
+      if (check && composer) {
+        composer.style.display = check.checked ? 'block' : 'none';
+      }
+    }
+
+    // Certificate Generator Modal
+    function generateOrderCertificate() {
+      const clientName = document.getElementById('orderClientName').value.trim() || 'أ. طارق ابوعشي';
+      const cart = MaisonApp.getCart();
+
+      if (cart.length === 0) {
+        MaisonApp.showToast('يرجى إضافة مقتنيات إلى السلة أولاً');
+        return;
+      }
+
+      const modal = document.getElementById('certModal');
+      const certClient = document.getElementById('certClientName');
+      const certDate = document.getElementById('certDate');
+      const certItems = document.getElementById('certItemsBreakdown');
+      const certTotal = document.getElementById('certTotalAmount');
+      const certNumber = document.getElementById('certNumber');
+
+      const randNum = Math.floor(1000 + Math.random() * 9000);
+      if (certNumber) certNumber.textContent = `AL-2026-${randNum}`;
+
+      if (certClient) certClient.textContent = clientName;
+      if (certDate) {
+        const d = new Date();
+        certDate.textContent = `${d.getDate()} / ${d.getMonth() + 1} / ${d.getFullYear()}`;
+      }
+
+      let subtotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      let grandTotal = subtotal - (subtotal * discountPercent);
+
+      if (certTotal) certTotal.textContent = MaisonApp.formatPrice(grandTotal);
+
+      const lang = MaisonApp.getLang();
+      let itemsHtml = '<ul style="list-style: none; padding: 0;">';
+      cart.forEach(item => {
+        const name = lang === 'ar' ? (item.name_ar || item.name) : (item.name_en || item.name);
+        itemsHtml += `
+          <li style="display: flex; justify-content: space-between; border-bottom: 1px dotted var(--ink-border); padding: 4px 0;">
+            <span>● ${name} (${item.size || '50ml'}) ${item.isBespoke ? '— [توليفة معملية خاصة]' : ''}</span>
+            <span style="font-family: var(--font-mono);">${item.qty} Qty // ${MaisonApp.formatPrice(item.price * item.qty)}</span>
+          </li>
+        `;
+      });
+      itemsHtml += '</ul>';
+
+      if (certItems) certItems.innerHTML = itemsHtml;
+      if (modal) modal.classList.add('active');
+    }
+
+    function closeCertModal() {
+      const modal = document.getElementById('certModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    function confirmOrderCompletion() {
+      closeCertModal();
+      MaisonApp.showToast('تم اعتماد طلبك بنجاح! جاري تحضير الطرد وختم الصيدلية في العُلا.');
+      // Optional cart clearing or saving order history
+    }
+
+    window.renderCheckoutItems = renderCheckoutItems;
+
+    window.onMaisonLanguageChanged = () => {
+      renderCheckoutItems();
+    };
+
+    window.onMaisonCurrencyChanged = () => {
+      renderCheckoutItems();
+    };
+  </script>
+</body>
+</html>
