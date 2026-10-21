@@ -1,0 +1,22 @@
+{
+  "name": "maison-alula-haute-parfumerie",
+  "version": "1.0.0",
+  "description": "Maison AlUla | دار العُلا للعطور النادرة والمقتنيات الحسية — Luxury Haute Parfumerie, Bespoke Scent Atelier & Cultural Editorial Magazine",
+  "private": false,
+  "homepage": "https://tareq0001.github.io/Maison-AlUla-Haute-Parfumerie/",
+  "author": "Tariq Abuashi <abuos.tareq@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "python:test": "python python_engine/fragrance_accord_optimizer.py --self-test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11",
+    "vitest": "^1.6.0"
+  }
+}

@@ -1,0 +1,39 @@
+name: Maison AlUla CI & Olfactory Quality Suite
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-olfactory-chemistry:
+    name: TypeScript & Python Olfactory Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Node Dependencies
+        run: npm ci || npm install
+
+      - name: Verify TypeScript Compilation
+        run: npx tsc --noEmit
+
+      - name: Execute Vitest Suite
+        run: npm test
+
+      - name: Execute Python Chemical Optimizer Self-Test
+        run: python python_engine/fragrance_accord_optimizer.py --self-test

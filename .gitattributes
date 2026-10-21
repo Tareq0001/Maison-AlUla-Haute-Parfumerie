@@ -1,0 +1,17 @@
+# GitHub Linguist Configuration for Maison AlUla Haute Parfumerie
+# Focuses repository statistics on the core TypeScript and Python scientific formulation engine
+
+# Vendor client-side runtime libraries & sub-pages from language statistics
+assets/catalog.js linguist-vendored
+assets/articles.js linguist-vendored
+assets/app.js linguist-vendored
+assets/styles.css linguist-vendored
+collections.html linguist-vendored
+atelier.html linguist-vendored
+journal.html linguist-vendored
+checkout.html linguist-vendored
+
+# Ensure TypeScript and Python are highlighted as primary languages
+*.ts linguist-detectable=true
+*.py linguist-detectable=true
+index.html linguist-detectable=true
